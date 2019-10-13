@@ -10,7 +10,7 @@ namespace GAP.PruebaSeguros.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page - Julian";
+            ViewBag.Title = "Home Page";
 
             return View();
         }

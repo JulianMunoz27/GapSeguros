@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,6 +49,9 @@
     <Compile Include="Models\CoveringType.cs" />
     <Compile Include="Models\InsurancePolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CoveringTypes\CoveringTypeServices.cs" />
+    <Compile Include="Services\CoveringTypes\ICoveringTypeRepository.cs" />
+    <Compile Include="Services\CoveringTypes\ICoveringTypeServices.cs" />
     <Compile Include="Services\InsurancePolicies\IInsurancePolicyRepository.cs" />
     <Compile Include="Services\InsurancePolicies\IInsurancePolicyServices.cs" />
     <Compile Include="Services\InsurancePolicies\InsurancePolicyServices.cs" />

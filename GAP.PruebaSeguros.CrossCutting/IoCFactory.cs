@@ -1,4 +1,5 @@
 ﻿using GAP.PruebaSeguros.Data.Repositories;
+using GAP.PruebaSeguros.Domain.Services.CoveringTypes;
 using GAP.PruebaSeguros.Domain.Services.InsurancePolicies;
 using System;
 using System.Collections.Generic;
@@ -101,6 +102,7 @@ namespace GAP.PruebaSeguros.CrossCutting
         private static void RegisterServices(IUnityContainer container)
         {
             container.RegisterType<IInsurancePolicyServices, InsurancePolicyServices>(new TransientLifetimeManager());
+            container.RegisterType<ICoveringTypeServices, CoveringTypeServices>(new TransientLifetimeManager());
         }
 
         /// <summary>
@@ -110,6 +112,7 @@ namespace GAP.PruebaSeguros.CrossCutting
         private static void RegisterRepositories(IUnityContainer container)
         {
             container.RegisterType<IInsurancePolicyRepository, InsurancePolicyRepository>(new TransientLifetimeManager());
+            container.RegisterType<ICoveringTypeRepository, CoveringTypeRepository>(new TransientLifetimeManager());
         }
 
         /// <summary>

@@ -53,8 +53,10 @@
   <ItemGroup>
     <Compile Include="Context.cs" />
     <Compile Include="GenericRepository.cs" />
+    <Compile Include="Mappings\CoveringTypeMap.cs" />
     <Compile Include="Mappings\InsurancePolicyMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CoveringTypeRepository.cs" />
     <Compile Include="Repositories\InsurancePolicyRepository.cs" />
   </ItemGroup>
   <ItemGroup />
