@@ -23,11 +23,47 @@ namespace GAP.PruebaSeguros.Domain.Services.InsurancePolicies
             this.repository = repository;
         }
 
-        public IQueryable<InsurancePolicy> GetInsurancePolicyById(int id)
+        public InsurancePolicy CreateInsurancePolicy(InsurancePolicy insurancePolicy)
         {
             try
             {
-                return repository.GetInsurancePolicyById(id);
+                return repository.CreateInsurancePolicy(insurancePolicy);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void DeleteInsurancePolicy(int id)
+        {
+            try
+            {
+                repository.DeleteInsurancePolicy(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IQueryable<InsurancePolicy> GetInsurancePolicy(int id)
+        {
+            try
+            {
+                return repository.GetInsurancePolicy(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void UpdateInsurancePolicy(InsurancePolicy insurancePolicy)
+        {
+            try
+            {
+                repository.UpdateInsurancePolicy(insurancePolicy);
             }
             catch (Exception ex)
             {

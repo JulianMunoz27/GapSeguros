@@ -14,6 +14,25 @@ namespace GAP.PruebaSeguros.Domain.Services.InsurancePolicies
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        IQueryable<InsurancePolicy> GetInsurancePolicyById(int id);
+        IQueryable<InsurancePolicy> GetInsurancePolicy(int id);
+
+        /// <summary>
+        /// Creates an InsurancePolicy.
+        /// </summary>
+        /// <param name="insurancePolicy"></param>
+        /// <returns></returns>
+        InsurancePolicy CreateInsurancePolicy(InsurancePolicy insurancePolicy);
+
+        /// <summary>
+        /// Updates an InsurancePolicy.
+        /// </summary>
+        /// <param name="insurancePolicy"></param>
+        void UpdateInsurancePolicy(InsurancePolicy insurancePolicy);
+
+        /// <summary>
+        /// Deletes an InsurancePolicy.
+        /// </summary>
+        /// <param name="id"></param>
+        void DeleteInsurancePolicy(int id);
     }
 }

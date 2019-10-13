@@ -53,6 +53,8 @@
     <Compile Include="Services\InsurancePolicies\InsurancePolicyServices.cs" />
     <Compile Include="Specification\ISpecification.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="API\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

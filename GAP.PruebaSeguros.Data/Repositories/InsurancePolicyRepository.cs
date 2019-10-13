@@ -17,9 +17,36 @@ namespace GAP.PruebaSeguros.Data.Repositories
 
         private Context context = new Context();
 
-        public IQueryable<InsurancePolicy> GetInsurancePolicyById(int id)
+        public IQueryable<InsurancePolicy> GetInsurancePolicy(int id)
         {
             return context.InsurancePolicy.Where(r => r.Id == id);
+        }
+
+        public InsurancePolicy CreateInsurancePolicy(InsurancePolicy insurancePolicy)
+        {
+            context.InsurancePolicy.Add(insurancePolicy);
+            context.SaveChanges();
+            return insurancePolicy;
+        }
+
+        public void UpdateInsurancePolicy(InsurancePolicy insurancePolicy)
+        {
+            var insurance = context.InsurancePolicy.FirstOrDefault(i => i.Id == insurancePolicy.Id);
+            if(insurance != null)
+            {
+                insurance = insurancePolicy;
+                context.SaveChanges();
+            }
+        }
+
+        public void DeleteInsurancePolicy(int id)
+        {
+            var insurance = context.InsurancePolicy.FirstOrDefault(i => i.Id == id);
+            if (insurance != null)
+            {
+                context.InsurancePolicy.Remove(insurance);
+                context.SaveChanges();
+            }            
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using GAP.PruebaSeguros.Domain.Default;
+﻿using GAP.PruebaSeguros.Data.Mappings;
+using GAP.PruebaSeguros.Domain.Default;
 using GAP.PruebaSeguros.Domain.Models;
 using System;
 using System.Collections.Generic;
