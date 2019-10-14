@@ -1,4 +1,5 @@
 ﻿
+using GAP.PruebaSeguros.CrossCutting;
 using GAP.PruebaSeguros.Domain.Models;
 using GAP.PruebaSeguros.Domain.Services.InsurancePolicies;
 using GAP.PruebaSeguros.Web.Controllers;
@@ -28,9 +29,10 @@ namespace GAP.PruebaSeguros.Test.UnitTest.Controller
         public void Get_InsurancePolicy_ShouldReturnOk()
         {
             var id = 1;
+            var list = new List<InsurancePolicy>();
+
 
             var service = new Mock<IInsurancePolicyServices>();
-            var list = new List<InsurancePolicy>();
             service.Setup(i => i.GetInsurancePolicy(id)).Returns(list.AsQueryable());
 
             var controller = new InsurancePolicyController();

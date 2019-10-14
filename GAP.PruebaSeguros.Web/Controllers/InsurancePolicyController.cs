@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace GAP.PruebaSeguros.Web.Controllers
 {
-    [RoutePrefix("api/[controller]")]
+    [RoutePrefix("api/InsurancePolicy")]
     public class InsurancePolicyController : ApiController
     {
         private CommonHelper helper;        

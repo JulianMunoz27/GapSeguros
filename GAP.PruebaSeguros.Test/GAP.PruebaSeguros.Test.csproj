@@ -102,6 +102,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GAP.PruebaSeguros.CrossCutting\GAP.PruebaSeguros.CrossCutting.csproj">
+      <Project>{C66E0390-F875-481B-BD29-5FB41262A950}</Project>
+      <Name>GAP.PruebaSeguros.CrossCutting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GAP.PruebaSeguros.Domain\GAP.PruebaSeguros.Domain.csproj">
       <Project>{D6288231-7AA2-4EC1-8B0E-9F9C611E65E7}</Project>
       <Name>GAP.PruebaSeguros.Domain</Name>
