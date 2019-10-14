@@ -1,4 +1,6 @@
-﻿using GAP.PruebaSeguros.CrossCutting;
+﻿using GAP.PruebaSeguros.Application.BusinessLogic;
+using GAP.PruebaSeguros.Application.Helpers;
+using GAP.PruebaSeguros.CrossCutting;
 using GAP.PruebaSeguros.Domain.Models;
 using GAP.PruebaSeguros.Domain.Services.CoveringTypes;
 using GAP.PruebaSeguros.Domain.Services.InsurancePolicies;
@@ -12,6 +14,13 @@ namespace GAP.PruebaSeguros.Web.Controllers
     [RoutePrefix("api/[controller]")]
     public class InsurancePolicyController : ApiController
     {
+        private CommonHelper helper;        
+
+        public InsurancePolicyController()
+        {
+            helper = new CommonHelper();
+        }
+
         [HttpGet]
         [Route("{id:int}")]
         public IHttpActionResult Get(int id)
@@ -23,12 +32,8 @@ namespace GAP.PruebaSeguros.Web.Controllers
                 return NotFound();
             }
 
-            var coveringTypeIds = policy.CoveringTypes.Split(',').ToList();
-
-            var coveringTypes = IoCFactory.Resolve<ICoveringTypeServices>().GetCoveringTypesByList(coveringTypeIds);
-
-            policy.CoveringTypes = string.Join(", ", coveringTypes);
-
+            policy = helper.CompleteInsurance(policy);
+           
             return Ok(policy);
         }
 
@@ -38,6 +43,11 @@ namespace GAP.PruebaSeguros.Web.Controllers
         {
             try
             {
+                if(!helper.ValidInsurancePolicy(insurancePolicy))
+                {
+                    return BadRequest("High Risk Insurance Policy must have covering percentage below 50%");
+                }
+                
                 var insurance = IoCFactory.Resolve<IInsurancePolicyServices>().CreateInsurancePolicy(insurancePolicy);
                 return Created(new Uri(Request.RequestUri + insurance.Name), insurance);
             }
@@ -53,6 +63,11 @@ namespace GAP.PruebaSeguros.Web.Controllers
         {
             try
             {
+                if (!helper.ValidInsurancePolicy(insurancePolicy))
+                {
+                    return BadRequest("High Risk Insurance Policy must have covering percentage below 50%");
+                }
+
                 IoCFactory.Resolve<IInsurancePolicyServices>().UpdateInsurancePolicy(insurancePolicy);
                 return Ok();
             }

@@ -42,6 +42,11 @@ namespace GAP.PruebaSeguros.Data
         /// </summary>
         public DbSet<CoveringType> CoveringType { get; set; }
 
+        /// <summary>
+        /// gets or sets data on the RiskType Table.
+        /// </summary>
+        public DbSet<RiskType> RiskType { get; set; }
+        
         #endregion DbSet
 
         /// <summary>
@@ -94,6 +99,7 @@ namespace GAP.PruebaSeguros.Data
         {
             modelBuilder.Configurations.Add(new InsurancePolicyMap());
             modelBuilder.Configurations.Add(new CoveringTypeMap());
+            modelBuilder.Configurations.Add(new RiskTypeMap());
         }
     }
 }

@@ -25,6 +25,6 @@ namespace GAP.PruebaSeguros.Domain.Models
         [Required(ErrorMessage = "Invalid Covering Types")]
         public string CoveringTypes { get; set; }
         [Required(ErrorMessage = "Invalid Covering Percentage")]
-        public string CoveringPercentage { get; set; }
+        public int CoveringPercentage { get; set; }
     }
 }

@@ -174,7 +174,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InsurancePolicyController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,6 +264,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GAP.PruebaSeguros.Application\GAP.PruebaSeguros.Application.csproj">
+      <Project>{C0B17026-FD5C-4694-9D3F-2C8D7C7C811C}</Project>
+      <Name>GAP.PruebaSeguros.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GAP.PruebaSeguros.CrossCutting\GAP.PruebaSeguros.CrossCutting.csproj">
       <Project>{C66E0390-F875-481B-BD29-5FB41262A950}</Project>
       <Name>GAP.PruebaSeguros.CrossCutting</Name>

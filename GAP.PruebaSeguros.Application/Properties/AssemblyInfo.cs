@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GAP.PruebaSeguros.Test")]
+[assembly: AssemblyTitle("GAP.PruebaSeguros.Application")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GAP.PruebaSeguros.Test")]
+[assembly: AssemblyProduct("GAP.PruebaSeguros.Application")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9dc13799-0f3b-4a2b-9616-96bfe081dcbd")]
+[assembly: Guid("c0b17026-fd5c-4694-9d3f-2c8d7c7c811c")]
 
 // Version information for an assembly consists of the following four values:
 //

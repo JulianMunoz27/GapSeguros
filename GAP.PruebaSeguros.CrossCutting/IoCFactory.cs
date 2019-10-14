@@ -1,12 +1,10 @@
 ﻿using GAP.PruebaSeguros.Data.Repositories;
 using GAP.PruebaSeguros.Domain.Services.CoveringTypes;
 using GAP.PruebaSeguros.Domain.Services.InsurancePolicies;
+using GAP.PruebaSeguros.Domain.Services.RiskTypes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using Unity;
 using Unity.Lifetime;
 
@@ -103,6 +101,7 @@ namespace GAP.PruebaSeguros.CrossCutting
         {
             container.RegisterType<IInsurancePolicyServices, InsurancePolicyServices>(new TransientLifetimeManager());
             container.RegisterType<ICoveringTypeServices, CoveringTypeServices>(new TransientLifetimeManager());
+            container.RegisterType<IRiskTypeServices, RiskTypeServices>(new TransientLifetimeManager());
         }
 
         /// <summary>
@@ -113,6 +112,7 @@ namespace GAP.PruebaSeguros.CrossCutting
         {
             container.RegisterType<IInsurancePolicyRepository, InsurancePolicyRepository>(new TransientLifetimeManager());
             container.RegisterType<ICoveringTypeRepository, CoveringTypeRepository>(new TransientLifetimeManager());
+            container.RegisterType<IRiskTypeRepository, RiskTypeRepository>(new TransientLifetimeManager());
         }
 
         /// <summary>
