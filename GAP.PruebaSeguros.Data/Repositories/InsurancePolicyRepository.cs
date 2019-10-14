@@ -32,7 +32,7 @@ namespace GAP.PruebaSeguros.Data.Repositories
         public void UpdateInsurancePolicy(InsurancePolicy insurancePolicy)
         {
             var insurance = context.InsurancePolicy.FirstOrDefault(i => i.Id == insurancePolicy.Id);
-            if(insurance != null)
+            if (insurance != null)
             {
                 insurance = insurancePolicy;
                 context.SaveChanges();
@@ -42,11 +42,8 @@ namespace GAP.PruebaSeguros.Data.Repositories
         public void DeleteInsurancePolicy(int id)
         {
             var insurance = context.InsurancePolicy.FirstOrDefault(i => i.Id == id);
-            if (insurance != null)
-            {
-                context.InsurancePolicy.Remove(insurance);
-                context.SaveChanges();
-            }            
+            context.InsurancePolicy.Remove(insurance);
+            context.SaveChanges();
         }
     }
 }

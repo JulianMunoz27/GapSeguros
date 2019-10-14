@@ -6,7 +6,7 @@
             type: 'get',
             statusCode: {
                 404: function () {
-                    alert('Insurance Policy not found');
+                    alert('Insurance Policy not found.');
                 }
             }
         }).done(function (res) {
@@ -20,5 +20,4 @@
             $("#CoveringPercentage").val(res.CoveringPercentage);
         });
     });
-
 });

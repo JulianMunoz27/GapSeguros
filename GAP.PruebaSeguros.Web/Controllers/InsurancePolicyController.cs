@@ -83,8 +83,15 @@ namespace GAP.PruebaSeguros.Web.Controllers
         {
             try
             {
+                var policy = IoCFactory.Resolve<IInsurancePolicyServices>().GetInsurancePolicy(id).FirstOrDefault();
+
+                if (policy == null)
+                {
+                    return NotFound();
+                }
+
                 IoCFactory.Resolve<IInsurancePolicyServices>().DeleteInsurancePolicy(id);
-                return Delete(id);
+                return Ok();
             }
             catch (Exception)
             {
