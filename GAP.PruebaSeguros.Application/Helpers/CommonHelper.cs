@@ -42,6 +42,7 @@ namespace GAP.PruebaSeguros.Application.Helpers
         public bool ValidInsurancePolicy(InsurancePolicy insurancePolicy)
         {
             var result = insurancePolicy.RiskType == terms.HighRisk && insurancePolicy.CoveringPercentage > 50;
+
             return !result;
         }
     }

@@ -34,7 +34,14 @@ namespace GAP.PruebaSeguros.Data.Repositories
             var insurance = context.InsurancePolicy.FirstOrDefault(i => i.Id == insurancePolicy.Id);
             if (insurance != null)
             {
-                insurance = insurancePolicy;
+                insurance.Name = insurancePolicy.Name;
+                insurance.Description = insurancePolicy.Description;
+                insurance.StartDate = insurancePolicy.StartDate;
+                insurance.CoveringMonths = insurancePolicy.CoveringMonths;
+                insurance.price = insurancePolicy.price;
+                insurance.RiskType = insurancePolicy.RiskType;
+                insurance.CoveringTypes = insurancePolicy.CoveringTypes;
+                insurance.CoveringPercentage = insurancePolicy.CoveringPercentage;
                 context.SaveChanges();
             }
         }
