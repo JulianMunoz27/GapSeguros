@@ -44,10 +44,21 @@ namespace GAP.PruebaSeguros.Test.UnitTest.Controller
         [Test]
         public void Post_InsurancePolicy_ShouldRetornCreated()
         {
-            var insurance = new InsurancePolicy();
+            var insurance = new InsurancePolicy()
+            {
+                Id = 1,
+                Name = "Test Policy",
+                Description = "Test Description",
+                StartDate = DateTime.Now,
+                CoveringMonths = 12,
+                Price = "1000 USD",
+                RiskType = "Low",
+                CoveringTypes = "Fire, Theft",
+                CoveringPercentage = 80
+            }; ;
 
             var service = new Mock<IInsurancePolicyServices>();
-            service.Setup(i => i.CreateInsurancePolicy(insurance)).Returns(new InsurancePolicy());
+            var foo = service.Setup(i => i.CreateInsurancePolicy(insurance)).Returns(new InsurancePolicy());
 
             var controller = new InsurancePolicyController();
             var result = controller.Post(insurance);

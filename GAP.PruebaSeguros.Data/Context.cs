@@ -25,7 +25,7 @@ namespace GAP.PruebaSeguros.Data
         /// Class constructor connected to the default connection string.
         /// </summary>
         public Context()
-            : base("GAPSeguros")
+            : base("Server=DESKTOP-V5FN81Q\\SQLEXPRESS;Database=PruebaSeguros;Trusted_Connection=True;")
         {
 
         }
