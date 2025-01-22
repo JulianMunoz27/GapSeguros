@@ -38,7 +38,7 @@ namespace GAP.PruebaSeguros.Data.Repositories
                 insurance.Description = insurancePolicy.Description;
                 insurance.StartDate = insurancePolicy.StartDate;
                 insurance.CoveringMonths = insurancePolicy.CoveringMonths;
-                insurance.price = insurancePolicy.price;
+                insurance.Price = insurancePolicy.Price;
                 insurance.RiskType = insurancePolicy.RiskType;
                 insurance.CoveringTypes = insurancePolicy.CoveringTypes;
                 insurance.CoveringPercentage = insurancePolicy.CoveringPercentage;
