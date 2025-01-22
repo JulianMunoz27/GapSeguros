@@ -22,7 +22,7 @@ namespace GAP.PruebaSeguros.Data.Mappings
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.StartDate).HasColumnName("StartDate");
             this.Property(t => t.CoveringMonths).HasColumnName("CoveringMonths");
-            this.Property(t => t.price).HasColumnName("price");
+            this.Property(t => t.Price).HasColumnName("Price");
             this.Property(t => t.RiskType).HasColumnName("RiskType");
             this.Property(t => t.CoveringTypes).HasColumnName("CoveringTypes");
             this.Property(t => t.CoveringPercentage).HasColumnName("CoveringPercentage");

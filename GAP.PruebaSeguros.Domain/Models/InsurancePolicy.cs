@@ -19,7 +19,7 @@ namespace GAP.PruebaSeguros.Domain.Models
         [Required(ErrorMessage = "Invalid Covering Months.")]
         public int CoveringMonths { get; set; }
         [Required(ErrorMessage = "Invalid Price.")]
-        public string price { get; set; }
+        public string Price { get; set; }
         [Required(ErrorMessage = "Invalid Risk Type")]
         public string RiskType { get; set; }
         [Required(ErrorMessage = "Invalid Covering Types")]
